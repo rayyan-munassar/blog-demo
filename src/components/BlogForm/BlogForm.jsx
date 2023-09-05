@@ -1,21 +1,34 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./BlogForm.module.css";
 import Modal from "../UI/Modal";
+import BlogContext from "../store/blog-context";
 
 const BlogForm = (props) => {
-    // State to store form data
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
     const [image, setImage] = useState(null);
 
-    // Handle form submission
+    const blogCtx = useContext(BlogContext)
+
+    const validTitle = title.trim() !== "";
+    const validContent = content.trim() !== "";
+
+    const validFrom = validTitle && validContent;
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Here, you can send the form data (title, content, and image) to your backend for processing.
-        // You may use an HTTP POST request to send this data.
 
-        // Reset the form fields after submission
+        if (!validFrom) {
+            return
+        }
+
+        const blog = { title, content, image };
+
+        blogCtx.addBlog(blog)
+
+
         setTitle("");
         setContent("");
         setImage(null);
