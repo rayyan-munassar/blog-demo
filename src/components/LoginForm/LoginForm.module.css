@@ -1,0 +1,37 @@
+/* LoginForm.module.css */
+
+/* Style for the form container */
+.formContainer {
+    /* max-width: 400px; */
+    margin: 0 auto;
+}
+
+/* Style for form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Style for form inputs */
+input {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the submit button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style for the modal content (assuming it wraps the form) */
+.ModalContent {
+    padding: 20px;
+}
