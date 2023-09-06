@@ -24,7 +24,10 @@ const BlogForm = (props) => {
             return
         }
 
-        const blog = { title, content, image };
+        const blogId = Math.random()
+        console.log(blogId)
+
+        const blog = { id: blogId, title, content, image };
 
         blogCtx.addBlog(blog)
 

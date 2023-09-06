@@ -9,8 +9,9 @@ const defaultBlogState = {
 
 const blogReducer = (state, action) => {
     if (action.type == "ADD") {
-        const updatedBlogs = state.blogs;
+        const updatedBlogs = [...state.blogs];
         updatedBlogs.push(action.blog)
+        console.log(updatedBlogs)
         return {
             blogs: updatedBlogs
         }
@@ -18,7 +19,8 @@ const blogReducer = (state, action) => {
 
     // if (action.type == "REMOVE") {
 
-    //     const updatedBlogs = state.blogs.filter()
+    //     const updatedBlogs = state.blogs.filter();
+
 
     // }
 

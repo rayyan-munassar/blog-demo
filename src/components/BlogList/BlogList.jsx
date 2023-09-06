@@ -1,6 +1,7 @@
 
 
 import BlogContext from "../store/blog-context"
+import BlogCard from "./BlogCard"
 
 import { useContext } from "react"
 
@@ -18,11 +19,12 @@ const BlogList = () => {
         blogContent = <div>
             {
                 blogCtx.blogs.map(blog => {
-                    return <>
-                        <p>{blog.title}</p>
-                        <p>{blog.content}</p>
-                        <p>{blog?.image}</p>
-                    </>
+                    return <BlogCard
+                        key={blog.id}
+                        title={blog.title}
+                        content={blog.title}
+                        image={blog?.image}
+                    />
 
                 })
             }

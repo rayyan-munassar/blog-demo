@@ -1,0 +1,35 @@
+/* BlogCard.module.css */
+
+.blog-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 5rem auto;
+
+}
+
+.blog-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.blog-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-image img {
+    max-width: 200px;
+    height: 200px;
+    margin-bottom: 12px;
+    object-fit: cover;
+
+}
+
+.blog-content {
+    font-size: 16px;
+    line-height: 1.5;
+}

@@ -7,6 +7,7 @@ import LoginForm from './components/LoginForm/LoginForm'
 import BlogForm from "./components/BlogForm/BlogForm"
 import BlogProvider from './components/store/BlogProvider'
 import BlogList from './components/BlogList/BlogList'
+import BlogCard from './components/BlogList/BlogCard'
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
