@@ -14,6 +14,9 @@ const BlogCard = (props) => {
 
     return (
         <div className={classes["blog-card"]}>
+            <span onClick={props.onRemove} className={classes.close}>
+                &times;
+            </span>
             <h2 className={classes["blog-title"]}>{title}</h2>
             <div className={classes["blog-image"]}>
                 {image && <img src={imageUrl} alt="Blog Cover" />}

@@ -11,6 +11,10 @@ const BlogList = () => {
 
     const blogCtx = useContext(BlogContext)
 
+    const removeBlogHandler = (id) => {
+        blogCtx.removeBlog(id)
+    }
+
     let blogContent = <p>There is no any blogs</p>
 
 
@@ -24,6 +28,7 @@ const BlogList = () => {
                         title={blog.title}
                         content={blog.title}
                         image={blog?.image}
+                        onRemove={() => { removeBlogHandler(blog.id) }}
                     />
 
                 })

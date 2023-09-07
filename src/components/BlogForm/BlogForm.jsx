@@ -25,7 +25,6 @@ const BlogForm = (props) => {
         }
 
         const blogId = Math.random()
-        console.log(blogId)
 
         const blog = { id: blogId, title, content, image };
 
